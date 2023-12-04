@@ -36,7 +36,7 @@ export default function FeedbackForm() {
                         version='primary'
                         isDisabled={btnDisabled}
                     >
-                        Send
+                        TEST
                     </Button>
                 </div>
                 {message && <div className='message'>{message}</div>}
