@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/nataliia-orlova/feedback-UI/static/css/main.41e7e927.css",
+    "main.js": "/nataliia-orlova/feedback-UI/static/js/main.6109dac5.js",
+    "index.html": "/nataliia-orlova/feedback-UI/index.html",
+    "main.41e7e927.css.map": "/nataliia-orlova/feedback-UI/static/css/main.41e7e927.css.map",
+    "main.6109dac5.js.map": "/nataliia-orlova/feedback-UI/static/js/main.6109dac5.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.41e7e927.css",
+    "static/js/main.6109dac5.js"
+  ]
+}
