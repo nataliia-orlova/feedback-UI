@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/nataliia-orlova/feedback-UI/static/css/main.41e7e927.css",
-    "main.js": "/nataliia-orlova/feedback-UI/static/js/main.7723c909.js",
-    "index.html": "/nataliia-orlova/feedback-UI/index.html",
-    "main.41e7e927.css.map": "/nataliia-orlova/feedback-UI/static/css/main.41e7e927.css.map",
-    "main.7723c909.js.map": "/nataliia-orlova/feedback-UI/static/js/main.7723c909.js.map"
+    "main.css": "/feedback-UI/static/css/main.41e7e927.css",
+    "main.js": "/feedback-UI/static/js/main.c67b3273.js",
+    "index.html": "/feedback-UI/index.html",
+    "main.41e7e927.css.map": "/feedback-UI/static/css/main.41e7e927.css.map",
+    "main.c67b3273.js.map": "/feedback-UI/static/js/main.c67b3273.js.map"
   },
   "entrypoints": [
     "static/css/main.41e7e927.css",
-    "static/js/main.7723c909.js"
+    "static/js/main.c67b3273.js"
   ]
 }
