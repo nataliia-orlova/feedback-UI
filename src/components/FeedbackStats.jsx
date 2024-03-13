@@ -1,6 +1,9 @@
 import PropTypes from 'prop-types';
+import { useContext } from 'react';
+import FeedbackContext from '../context/FeedbackContext';
 
-export default function FeedbackStats({ feedback }) {
+export default function FeedbackStats() {
+    const { feedback } = useContext(FeedbackContext);
     // calculate rating avarage
     // allow 1 point after the dot, when zero is after the dot - don't show it
     // render 0 when there are no reviews
@@ -17,7 +20,3 @@ export default function FeedbackStats({ feedback }) {
         </div>
     );
 }
-
-FeedbackStats.propTypes = {
-    feedback: PropTypes.array.isRequired,
-};
