@@ -1,5 +1,4 @@
-import { createContext, useState } from 'react';
-import { v4 as uuidv4 } from 'uuid';
+import { createContext, useState, useEffect } from 'react';
 
 //  create context
 const FeedbackContext = createContext();
@@ -7,27 +6,26 @@ const FeedbackContext = createContext();
 //  takes in children since it will wrap everything else inside
 //  children are components that will need access to the state
 export const FeedbackProvider = ({ children }) => {
-    const [feedback, setFeedback] = useState([
-        {
-            id: 1,
-            text: 'This is feedback item 1',
-            rating: 4,
-        },
-        {
-            id: 2,
-            text: 'This is feedback item 2',
-            rating: 4,
-        },
-        {
-            id: 3,
-            text: 'This is feedback item 3',
-            rating: 4,
-        },
-    ]);
+    const [isLoading, setIsLoading] = useState(true);
+    const [feedback, setFeedback] = useState([]);
+
+    useEffect(() => {
+        fetchFeedback();
+    }, []);
+
+    //  fetch data from db
+    const fetchFeedback = async () => {
+        const response = await fetch(`/feedback`);
+        const data = await response.json();
+        setFeedback(data);
+        setIsLoading(false);
+    };
+
     const [feedbackEdit, setFeedbackEdit] = useState({
         item: {},
         edit: false,
     });
+
     //  set item to be updated
     const editFeedback = (item) => {
         setFeedbackEdit({
@@ -54,16 +52,24 @@ export const FeedbackProvider = ({ children }) => {
         }
     };
     //   add feedback
-    const addFeedback = (newFeedback) => {
-        newFeedback.id = uuidv4();
+    const addFeedback = async (newFeedback) => {
+        const response = await fetch('/feedback', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(newFeedback),
+        });
+        const data = await response.json();
+
         // get the current feedback items as an array (copy it) and add new feedback
-        setFeedback([newFeedback, ...feedback]);
-        console.log(newFeedback);
+        setFeedback([data, ...feedback]);
     };
     return (
         <FeedbackContext.Provider
             value={{
                 feedback,
+                isLoading,
                 deleteFeedback,
                 addFeedback,
                 editFeedback, // function
