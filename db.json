@@ -2,23 +2,18 @@
   "feedback": [
     {
       "id": "1",
-      "rating": 10,
-      "text": "This is feedback item 1 coming from the backend"
+      "text": "Great experience with the product, highly recommend!",
+      "rating": 9
     },
     {
       "id": "2",
-      "rating": 8,
-      "text": "This is feedback item 2 coming from the backend"
+      "text": "Fast shipping and excellent customer service.",
+      "rating": 7
     },
     {
-      "rating": 6,
-      "id": "4",
-      "text": "This is feedback item 2 coming from the backend"
-    },
-    {
-      "id": "8fe4",
-      "text": "This is a new feedback added to the list",
-      "rating": 5
+      "id": "50bd",
+      "text": "I enjoyed this service very much",
+      "rating": 10
     }
   ]
 }
